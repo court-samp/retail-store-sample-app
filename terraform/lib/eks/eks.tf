@@ -6,9 +6,10 @@ module "eks_cluster" {
     kubernetes = kubernetes.cluster
   }
 
-  cluster_name                   = var.environment_name
-  cluster_version                = var.cluster_version
-  cluster_endpoint_public_access = true
+  cluster_name                         = var.environment_name
+  cluster_version                      = var.cluster_version
+  cluster_endpoint_public_access       = true
+  cluster_endpoint_public_access_cidrs = var.cluster_endpoint_public_access_cidrs
 
   cluster_addons = {
     vpc-cni = {

@@ -59,4 +59,6 @@ module "retail_app_eks" {
   tags                  = module.tags.result
 
   istio_enabled = var.istio_enabled
+
+  cluster_endpoint_public_access_cidrs = var.api_access_cidrs
 }

@@ -41,3 +41,9 @@ variable "opentelemetry_enabled" {
   type        = bool
   default     = false
 }
+
+variable "cluster_endpoint_public_access_cidrs" {
+  description = "List of CIDR blocks allowed to access the public EKS Kubernetes API server endpoint. Defaults to open (0.0.0.0/0); override to restrict to specific IPs."
+  type        = list(string)
+  default     = ["0.0.0.0/0"]
+}
